@@ -21,6 +21,10 @@ class CognitoIdentityService {
   signup(body, callback) {
     return CognitoItentityMethods.signup(this.poolData, body, callback);
   }
+
+  signupConfirm(body, callback) {
+    return CognitoItentityMethods.signupConfirm(this.poolData, body, callback);
+  }
 }
 
 export default function Wrapper() {
