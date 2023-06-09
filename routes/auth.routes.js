@@ -2,6 +2,7 @@ import controller from '../controllers/auth.controller';
 import {
   validateSignupRequest,
   validateSignupConfirmRequest,
+  validateSigninRequest,
 } from '../middleware';
 
 export default (app) => {
@@ -11,4 +12,5 @@ export default (app) => {
     validateSignupConfirmRequest,
     controller.signupConfirm
   );
+  app.post('/api/auth/signin', validateSigninRequest, controller.signin);
 };
